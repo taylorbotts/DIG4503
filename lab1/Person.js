@@ -7,9 +7,7 @@ class Person {
     }
 
     speak(){
-        console.log("Hi!");
-        console.log("I'm " + this.name);
-        console.log("And my favorite color is " + chalk.keyword(this.favoriteColor)(this.favoriteColor));
+        console.log("Hi, I'm " + chalk.keyword(this.favoriteColor)(this.name) + "!");
     }
 }
 
