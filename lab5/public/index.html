@@ -1,0 +1,67 @@
+<html>
+  <body>
+    <h3>Search for Pokemon by ID or Name</h3>
+    <!-- ID Form -->
+    <form onsubmit="readID(event)">
+      <label for="id">Pokemon ID:</label>
+      <input type="text" name="" id="id">
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Name Form -->
+    <form onsubmit="readName(event)">
+      <label for="name">Pokemon name:</label>
+      <input type="text" name="" id="name">
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Reporting Area -->
+    <div id="reportingArea">
+    </div>
+  </body>
+</html>
+<script>
+  const reporting = document.querySelector ('#reportingArea')
+
+  function readID (event) {
+    
+    event.preventDefault ()
+
+    let input = document.querySelector ('#ID')
+
+    fetch ('/id/' + input.value)
+    .then ((res) => {
+      return res.json ()
+    })
+    .then ((result) => {
+      
+      if (result.error) {
+        reporting.innerHTML = result.error
+      } else {
+        reporting.innerHTML = result[0].name
+      }
+    })
+    input.value = ''
+  }
+
+  function readName (event) {
+    
+    event.preventDefault ()
+
+    let input = document.querySelector ('#name')
+
+    fetch ('/name/' + input.value)
+    .then ((res) => {
+      return res.json ()
+    })
+    .then ((result) => {
+
+      if (result.error) {
+        reporting.innerHTML = result.error
+      } else {
+        reporting.innerHTML = result[0].name
+      }
+    })
+    input.value = ''
+}
+</script>
