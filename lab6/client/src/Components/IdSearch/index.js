@@ -2,7 +2,7 @@ import React from 'react'
 
 class IdSearch extends React.Component {
 
-  readID (event) {
+  readID(event) {
 
     event.preventDefault()
 
@@ -14,7 +14,7 @@ class IdSearch extends React.Component {
         if (!res.ok) {
           throw Error(res.statusText)
         }
-        return res.json ()
+        return res.json()
       })
       .then((result) => {
 
@@ -23,14 +23,14 @@ class IdSearch extends React.Component {
         } else {
           reporting.innerHTML = result[0].name
         }
-      }).catch(function(error) {
+      }).catch(function (error) {
         console.log(error)
       })
 
     input.value = ''
   }
 
-  render () {
+  render() {
     return (
       <form onSubmit={this.readID}>
         <label htmlFor="id">Pokemon ID: </label>
