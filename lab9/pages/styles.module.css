@@ -1,0 +1,62 @@
+.nav {
+  background: red;
+  font-family: Helvetica;
+  text-align: center;
+  box-shadow: 0 .25rem .25rem rgba(0,0,0,0.2);
+}
+
+.navLink {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+}
+
+.navLink:hover {
+  background: rgb(177, 0, 0);
+}
+
+.search {
+  padding: 5%;
+  text-align: center;
+}
+
+.label {
+  text-align: center;
+  display: block;
+  font-weight: 600;
+  font-family: Helvetica;
+  font-size: 2rem;
+}
+
+.input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 2rem auto;
+  text-align: center;
+  padding: .5rem;
+  font-size: 1.5rem;
+}
+
+.submit {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: .5rem;
+  background: red;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: .5rem;
+}
+
+.reporting {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: Helvetica;
+}
+
+.pokemon {
+  padding: 1rem 0;
+}
